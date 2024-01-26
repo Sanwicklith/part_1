@@ -1,10 +1,10 @@
 import "./index.css";
 const StatisticLine = ({ text, value }) => {
   return (
-    <div>
+    <tr>
       <td>{text}</td>
       <td>{value}</td>
-    </div>
+    </tr>
   );
 };
 

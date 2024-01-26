@@ -9,27 +9,20 @@ const Statistics = ({ all, positive, avg, good, neutral, bad }) => {
         <div>
           <table className="statistics-table">
             <tbody>
-              <tr>
-                <StatisticLine text="Good" value={good} />
-              </tr>
-              <tr>
-                <StatisticLine text="Neutral" value={neutral} />
-              </tr>
-              <tr>
-                <StatisticLine text="Bad" value={bad} />
-              </tr>
-              <tr>
-                <StatisticLine text="All" value={all} />
-              </tr>
-              <tr>
-                <StatisticLine text="Average" value={avg ? avg : 0} />
-              </tr>
-              <tr>
-                <StatisticLine
-                  text="Positive"
-                  value={positive ? `${positive}%` : 0}
-                />
-              </tr>
+              <StatisticLine text="Good" value={good} />
+
+              <StatisticLine text="Neutral" value={neutral} />
+
+              <StatisticLine text="Bad" value={bad} />
+
+              <StatisticLine text="All" value={all} />
+
+              <StatisticLine text="Average" value={avg ? avg : 0} />
+
+              <StatisticLine
+                text="Positive"
+                value={positive ? `${positive}%` : 0}
+              />
             </tbody>
           </table>
         </div>
