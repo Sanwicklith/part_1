@@ -1,0 +1,27 @@
+.statistics-table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+.statistics-table th,
+.statistics-table td {
+  border: 1px solid #ddd; 
+  text-align: left; 
+  padding: 8px; 
+}
+td {
+  border: 1px solid #ddd; 
+  text-align: left; 
+  width: 400px;
+  padding: 8px; 
+.statistics-table th {
+  background-color: #f4f4f4; 
+  width: 50%; 
+}
+
+.statistics-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tbody {
+  width: 100%;
+}
