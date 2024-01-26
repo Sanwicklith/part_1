@@ -11,6 +11,7 @@ const App = () => {
   const positive = (good / all) * 100;
   return (
     <div>
+      <h2>Give feedback</h2>
       <div className="btn-container">
         <button onClick={() => setGood(good + 1)}>Good</button>
         <button onClick={() => setNeutral(neutral + 1)}>Neutral</button>
