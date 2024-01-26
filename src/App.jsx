@@ -12,12 +12,14 @@ const App = () => {
     "The only way to go fast, is to go well.",
   ];
 
+  const [mostVotes, setMostVotes] = useState(0);
+  const [highestVote, setHighestIndex] = useState(0);
   const [votes, setVotes] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
 
   const [selected, setSelected] = useState(0);
   const randomAnecdote = () => {
     let randomNumber = Math.floor(Math.random() * anecdotes.length);
-    console.log(randomNumber);
+
     setSelected(randomNumber);
   };
   const vote = () => {
@@ -25,9 +27,16 @@ const App = () => {
     newVotes[selected] += 1;
 
     setVotes(newVotes);
+    let max = Math.max(...newVotes);
+    setMostVotes(max);
+    let index = newVotes.indexOf(max);
+    setHighestIndex(index);
   };
+  console.log(mostVotes);
+  console.log(highestVote);
   return (
     <div>
+      <h2>Anecdote of the day</h2>
       <p>{anecdotes[selected]}</p>
       <p>
         Has {votes[selected]}{" "}
@@ -36,6 +45,11 @@ const App = () => {
       <div>
         <button onClick={vote}>Vote</button>
         <button onClick={randomAnecdote}>Next Anecdote</button>
+      </div>
+      <div>
+        <h2>Anecdote with the most votes</h2>
+
+        <p>{mostVotes > 0 ? anecdotes[highestVote] : ""}</p>
       </div>
     </div>
   );
